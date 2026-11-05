@@ -112,6 +112,12 @@ a:focus-visible,
   overflow-wrap: anywhere;
 }
 
+.sidebar-links .sound-toggle {
+  margin-top: 12px;
+  min-height: 44px;
+  font-size: 14px;
+}
+
 .sidebar-contact-text {
   margin: 0;
   font-size: 12px;
@@ -330,7 +336,7 @@ main > * {
 
 .mobile-bar { display: none; }
 .mobile-drawer { display: none; }
-.sidebar-links button[aria-current="page"] { color: #171717; text-decoration: underline; text-underline-offset: 6px; }
+.sidebar-links button[aria-current="page"] { color: #171717; text-decoration: none; }
 
 @media (max-width: 800px) {
   .desktop-sidebar { display: none; }

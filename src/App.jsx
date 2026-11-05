@@ -12,11 +12,22 @@ import "./App.css";
 export default function App() {
 
   const [activePage, setActivePage] = useState("about");
+  const [soundEnabled, setSoundEnabled] = useState(() => {
+    try { return localStorage.getItem("portfolio-sound") !== "off"; }
+    catch { return true; }
+  });
+
+  function toggleSound() {
+    const next = !soundEnabled;
+    setSoundEnabled(next);
+    try { localStorage.setItem("portfolio-sound", next ? "on" : "off"); }
+    catch { /* Keep the toggle working when browser storage is unavailable. */ }
+  }
 
   return (
     <>
-        <ButtonClickSound />
-        <Navbar onNavigate={setActivePage} activePage={activePage} />
+        <ButtonClickSound enabled={soundEnabled} />
+        <Navbar onNavigate={setActivePage} activePage={activePage} soundEnabled={soundEnabled} onToggleSound={toggleSound} />
 
         <main>
           {activePage === "about" && <About />}

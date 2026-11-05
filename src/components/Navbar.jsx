@@ -6,7 +6,7 @@ const pages = [
   ["recommendations", "Recommendations"], ["affiliations", "Affiliations"],
 ];
 
-export default function Navbar({ onNavigate, activePage }) {
+export default function Navbar({ onNavigate, activePage, soundEnabled, onToggleSound }) {
   const drawer = useRef(null);
   const [open, setOpen] = useState(false);
 
@@ -37,6 +37,9 @@ export default function Navbar({ onNavigate, activePage }) {
       <a className="sidebar-name" href="#about" onClick={event => { event.preventDefault(); navigate("about"); }}>Gabrielle Sacluti</a>
       <nav className="sidebar-links" aria-label="Main navigation">
         {pages.map(([page, label]) => <button key={page} aria-current={activePage === page ? "page" : undefined} onClick={() => navigate(page)}>{label}</button>)}
+        <button className="sound-toggle" data-sound-toggle aria-label="Interface sounds" aria-pressed={soundEnabled} onClick={onToggleSound}>
+          Sound: {soundEnabled ? "on" : "off"}
+        </button>
       </nav>
       <div className="sidebar-contact">
         <p className="sidebar-contact-text">For work, opportunities and any related queries, please reach me at</p>
