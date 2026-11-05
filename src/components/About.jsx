@@ -22,7 +22,7 @@ export default function About() {
         
           <nav className="about-socials font-pixel" aria-label="Social profiles">
             <a
-              href="https://github.com/Gab711-Git"
+              href="https://github.com/gabsacluti"
               target="_blank"
               rel="noopener noreferrer">
               github
