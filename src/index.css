@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Geist";
+  src: url("/geist-font-v1/Geist/webfonts/Geist[wght].woff2")
+    format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/geist-font-v1/GeistMono/webfonts/GeistMono[wght].woff2")
+    format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: "Geist Pixel";
+  src: url("/geist-font-v1/GeistPixel/webfonts/GeistPixel-Square.woff2")
+    format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}

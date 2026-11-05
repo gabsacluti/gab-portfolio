@@ -1,0 +1,420 @@
+/* ===== Page defaults ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Geist Mono", monospace;
+  background-color: #ffffff;
+  color: #171717;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 400;
+  color: #555555;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ===== Fonts ===== */
+
+.font-geist {
+  font-family: "Geist", Arial, sans-serif;
+}
+
+.font-mono {
+  font-family: "Geist Mono", monospace;
+}
+
+.font-pixel {
+  font-family: "Geist Pixel", sans-serif;
+}
+
+/* ===== Links and navigation ===== */
+
+a,
+.sidebar-links button {
+  color: #888888;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+}
+
+.sidebar-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+a:hover,
+.sidebar-links button:hover {
+  color: #000000;
+}
+
+a:focus-visible,
+.sidebar-links button:focus-visible {
+  outline: 2px solid #555555;
+  outline-offset: 5px;
+}
+
+/* ===== Sidebar ===== */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100dvh;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: "Geist Pixel", sans-serif;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e5e5;
+  overflow-y: auto;
+}
+
+.sidebar-name {
+  font-weight: 400;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sidebar-contact {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-wrap: anywhere;
+}
+
+.sidebar-contact-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #888888;
+}
+
+/* ===== Main content ===== */
+
+main {
+  margin-left: 260px;
+  padding: 64px clamp(24px, 5vw, 80px);
+}
+
+main > * {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  overflow-wrap: anywhere;
+}
+
+/* ===== About ===== */
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-areas: "photo details";
+  align-items: stretch;
+  gap: 32px;
+}
+
+.about-photo {
+  grid-area: photo;
+}
+
+.profile-photo {
+  display: block;
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.about-details {
+  grid-area: details;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.about-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-heading h2 {
+  margin: 0;
+  line-height: 1.15;
+}
+
+.about-tagline {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.about-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+#about-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+#about-description p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ===== Project and experience cards ===== */
+
+.project-card,
+.experience-card {
+  padding: 24px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+}
+
+.project-card h3,
+.experience-card h3 {
+  margin: 0 0 16px;
+}
+
+.project-card p,
+.experience-card p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.project-card p:last-child,
+.experience-card p:last-child {
+  margin-bottom: 0;
+}
+
+.experience-card ul {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.experience-card li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.experience-card li:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Technology stack ===== */
+
+.stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stack-card {
+  padding: 6px 12px;
+  background-color: #f8f8f8;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.stack-card:hover {
+  border-color: #000000;
+}
+
+.stack-card p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* ===== Certifications ===== */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
+}
+
+.certification-card {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.certification-card:hover {
+  border-color: #000000;
+}
+
+.certification-card h3 {
+  margin: 0 0 12px;
+}
+
+.certification-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.certificate-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+/* ===== Tablets and phones ===== */
+
+@media (max-width: 800px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    gap: 24px;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .sidebar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+
+  .sidebar-contact {
+    margin-top: 0;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 32px 24px;
+  }
+}
+
+/* ===== Narrow phones ===== */
+
+@media (max-width: 480px) {
+  .about-intro {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "photo"
+      "details";
+    gap: 24px;
+  }
+
+  #about-description {
+    margin-top: 32px;
+  }
+
+  .project-card,
+  .experience-card,
+  .certification-card {
+    padding: 20px;
+  }
+}
+
+.certifications-grid .experience-card {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@media (hover: hover) {
+  .certifications-grid .experience-card:hover {
+    transform: scale(0.98);
+    border-color: #171717;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certifications-grid .experience-card {
+    transition: none;
+  }
+
+  .certifications-grid .experience-card:hover {
+    transform: none;
+  }
+}
+
+/* ===== Affiliations ===== */
+
+.affiliation-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.affiliation-image {
+  display: block;
+  width: 180px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.affiliation-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Stack on narrow phones */
+@media (max-width: 480px) {
+  .affiliation-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .affiliation-image {
+    width: 100%;
+  }
+}
