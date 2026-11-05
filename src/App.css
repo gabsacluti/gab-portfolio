@@ -137,7 +137,7 @@ main > * {
 
 .about-intro {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
   grid-template-areas: "photo details";
   align-items: stretch;
   gap: 32px;
@@ -149,9 +149,10 @@ main > * {
 
 .profile-photo {
   display: block;
-  width: 220px;
-  height: 280px;
-  object-fit: cover;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
 }
 
@@ -168,11 +169,24 @@ main > * {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: max-content;
+  max-width: 100%;
 }
 
 .about-heading h2 {
   margin: 0;
   line-height: 1.15;
+}
+
+.about-intro-description {
+  margin: 0;
+  width: 0;
+  min-width: 100%;
+}
+
+.about-intro-description,
+#about-description p {
+  text-align: justify;
 }
 
 .about-tagline {

@@ -1,3 +1,5 @@
+import TryHackMeActivity from "./TryHackMeActivity";
+import Typewriter from "./Typewriter";
 export default function About() {
   return (
     <section id="about">
@@ -6,19 +8,18 @@ export default function About() {
         <div className="about-photo">
           <img
             className="profile-photo"
-            src="/images/profile.jpeg"
+            src="/images/profile-transparent.png"
             alt="Gabrielle Sacluti"
           />
         </div>
 
         <div className="about-details">
-          <h2 className="font-pixel">Gabrielle Sacluti</h2>
-        
-        <div className ="about-paragraph">
-          <p className="font-mono">
-            I'm an aspiring front-end engineer and penetration tester. I build modern web applications with modern technologies.
-          </p>
-        </div>
+          <div className="about-heading">
+            <h2 className="font-pixel">Gabrielle Sacluti</h2>
+            <p className="about-intro-description font-mono">
+              <Typewriter />
+            </p>
+          </div>
         
           <nav className="about-socials font-pixel" aria-label="Social profiles">
             <a
@@ -60,6 +61,7 @@ export default function About() {
         </p>
       </div>
       
+      <TryHackMeActivity />
     </section>
   );
 }

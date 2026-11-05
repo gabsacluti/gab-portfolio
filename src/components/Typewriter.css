@@ -1,0 +1,30 @@
+.typewriter { display: block; text-align: left; }
+.typewriter-stage { display: grid; }
+.typewriter-stage > span { grid-area: 1 / 1; }
+.typewriter-size { visibility: hidden; pointer-events: none; }
+.typewriter-tail { white-space: nowrap; }
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 3px;
+  background: currentColor;
+  vertical-align: -0.12em;
+  animation: typewriter-blink 1s step-end infinite;
+}
+.typewriter-static { display: none; }
+.typewriter-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@keyframes typewriter-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-animated { display: none; }
+  .typewriter-static { display: block; }
+  .typewriter-cursor { animation: none; }
+}
