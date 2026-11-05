@@ -1,9 +1,10 @@
+import TypewriterHeading from "./TypewriterHeading";
 import AffiliationsCard from "./AffiliationsCard.jsx";
 
 export default function Affiliations() {
   return (
     <section id="affiliations">
-      <h2 className="font-pixel">affiliations</h2>
+      <h2 className="font-pixel"><TypewriterHeading>affiliations</TypewriterHeading></h2>
 
       <AffiliationsCard
         name="Positive Hack Camp 2025"

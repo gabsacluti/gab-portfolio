@@ -1,8 +1,9 @@
+import TypewriterHeading from "./TypewriterHeading";
 import ProjectCard from "./ProjectCard.jsx";
 export default function Projects(){
     return (
         <div>
-            <h2 className="font-pixel">projects</h2>
+            <h2 className="font-pixel"><TypewriterHeading>projects</TypewriterHeading></h2>
             <div id="projects">
 
                   <ProjectCard

@@ -1,8 +1,9 @@
+import TypewriterHeading from "./TypewriterHeading";
 import ExperienceCard from "./ExperienceCard.jsx";
 export default function Experience() {
     return (
         <div>
-            <h2 className="font-pixel">experience</h2>
+            <h2 className="font-pixel"><TypewriterHeading>experience</TypewriterHeading></h2>
                 <div id="experience-card">
             
                 <ExperienceCard

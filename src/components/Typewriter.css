@@ -1,4 +1,5 @@
 .typewriter { display: block; text-align: left; }
+.typewriter-heading { display: inline-grid; max-width: 100%; text-align: left; }
 .typewriter-stage { display: grid; }
 .typewriter-stage > span { grid-area: 1 / 1; }
 .typewriter-size { visibility: hidden; pointer-events: none; }

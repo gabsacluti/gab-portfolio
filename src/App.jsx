@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ButtonClickSound from "./components/ButtonClickSound.jsx";
 import Navbar from "./components/Navbar.jsx";
 import About from "./components/About.jsx";
 import Project from "./components/Projects.jsx";
@@ -14,7 +15,8 @@ export default function App() {
 
   return (
     <>
-        <Navbar onNavigate= {setActivePage} />
+        <ButtonClickSound />
+        <Navbar onNavigate={setActivePage} activePage={activePage} />
 
         <main>
           {activePage === "about" && <About />}

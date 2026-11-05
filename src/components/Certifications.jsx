@@ -1,9 +1,10 @@
+import TypewriterHeading from "./TypewriterHeading";
 import CertificationsCard from "./CertificationsCard.jsx";
 
 export default function Certifications() {
   return (
     <div>
-      <h2 className="font-pixel">certifications</h2>
+      <h2 className="font-pixel"><TypewriterHeading>certifications</TypewriterHeading></h2>
 
       <div className="certifications-grid">
 

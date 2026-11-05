@@ -1,3 +1,4 @@
+import TypewriterHeading from "./TypewriterHeading";
 import TryHackMeActivity from "./TryHackMeActivity";
 import Typewriter from "./Typewriter";
 export default function About() {
@@ -15,7 +16,7 @@ export default function About() {
 
         <div className="about-details">
           <div className="about-heading">
-            <h2 className="font-pixel">Gabrielle Sacluti</h2>
+            <h2 className="font-pixel"><TypewriterHeading>Gabrielle Sacluti</TypewriterHeading></h2>
             <p className="about-intro-description font-mono">
               <Typewriter />
             </p>

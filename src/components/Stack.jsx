@@ -1,8 +1,9 @@
+import TypewriterHeading from "./TypewriterHeading";
 import StackCard from "./StackCard.jsx";
 export default function Stack() {
     return (
         <div>
-            <h2 className="font-pixel">tech stack</h2>
+            <h2 className="font-pixel"><TypewriterHeading>tech stack</TypewriterHeading></h2>
             <p>The tools, frameworks, and platforms I utilize in front-end, back-end, infrastructure, and Artificial Intelligence.</p>
 
             <h3 className="font-pixel">FRONTEND</h3>
